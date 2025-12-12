@@ -22,18 +22,19 @@ function setup() {
         i += GRID;
     }
     strokeWeight(2)
-    stroke("red");
+    
     i = GRID;
-    while (i < SIZE) {
-        line(25, i, SIZE-25, i);
-        i += GRID;
+    for(i = GRID;i < SIZE;i += GRID) {
+        stroke ("red")
+        line(25, i, SIZE - 25, i);
+        
     }
-  
-   strokeWeight(2)
+
+    strokeWeight(2)
     stroke("yellow");
     i = GRID;
     while (i < SIZE) {
-        line(25, i,i,i);
+        line(25, i, i, i);
         i += GRID;
     }
 }    
