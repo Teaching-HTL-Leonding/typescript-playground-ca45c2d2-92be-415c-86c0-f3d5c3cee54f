@@ -1,0 +1,39 @@
+function setup() {
+    const SIZE = 400; // Canvas size (square)
+    const GRID = 25; // Grid line distance
+
+    createCanvas(SIZE, SIZE);
+    background("black");
+
+    strokeWeight(0.25);
+    stroke("lightgray");
+
+    // Draw vertical lines
+    let i = GRID;
+    while (i < SIZE) {
+        line(i, 0, i, SIZE);
+        i += GRID;
+    }
+
+    // Draw horizontal lines
+    i = GRID;
+    while (i < SIZE) {
+        line(0, i, SIZE, i);
+        i += GRID;
+    }
+    strokeWeight(2)
+    stroke("red");
+    i = GRID;
+    while (i < SIZE) {
+        line(25, i, SIZE-25, i);
+        i += GRID;
+    }
+  
+   strokeWeight(2)
+    stroke("yellow");
+    i = GRID;
+    while (i < SIZE) {
+        line(25, i,i,i);
+        i += GRID;
+    }
+}    
