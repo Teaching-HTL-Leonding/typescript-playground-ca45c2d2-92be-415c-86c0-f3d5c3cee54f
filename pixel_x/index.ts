@@ -9,7 +9,10 @@ function setup() {
 
     for (let i = 1; i <= 15; i += 1) {
         fill("yellow")
+        rect(i*25, i*25, GRID, GRID)
 
-        rect(i * 25, i * 25, GRID, GRID)
+        fill("lime")
+        rect(i*25,height-GRID-i*25,GRID,GRID)
+      
     }
 }
