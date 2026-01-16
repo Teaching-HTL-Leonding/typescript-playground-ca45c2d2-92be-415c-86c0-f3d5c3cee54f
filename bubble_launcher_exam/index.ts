@@ -16,18 +16,23 @@ function draw() {
     fill('lightgray');
     stroke('darkgray');
     rect(0, 0, DIAM, height);
-
-    fill('yellow');
-    stroke('gold');
+    for (let i=1;i<10;i++){
+   
 
     circle(circleX, circleY, DIAM);
-
+     fill('yellow');
+    stroke('gold');
+   
     circleX += SPEED * direction;
     if (circleX - RADI < 0 || circleX + RADI > width) {
         direction *= -1;
         circleX = max(RADI, min(width - RADI, circleX));
+         push();
+    translate( random(0, circleY));
+    }
     }
 }
 
 function mouseClicked() {
+
 }
