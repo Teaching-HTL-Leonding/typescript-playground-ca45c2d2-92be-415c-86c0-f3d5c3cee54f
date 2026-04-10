@@ -7,12 +7,9 @@ function setup() {
     // Move the coordinate origin 10 px right and 10 px down.
     // Every subsequent drawing call is now relative to (10, 10),
     // giving us a small margin around the hive.
-    
+
     translate(10, 10);
     drawHoneycomb()
-    line(20,0,45,0)
-    line(20,0,65,25)
-    line(20,50,45,50)
     //
     // Vertex layout (pixel coordinates, origin = top-left of bounding box):
     //
@@ -26,9 +23,36 @@ function setup() {
     // <<< ADD YOUR CODE HERE >>>
 }
 
-function drawHoneycomb():void{
+function drawHoneycomb(): void {
 
-    for (let i = 0; i < 6;i++) {
-        for (let o =0; o<7; o++)
+    for (let i = 0; i < 1; i++) {
+        for (let o = 0; o < 10; o++) {
+            let x = o * 45
+            let y = i * 38
+            
+            if (i % 2 === 1) {
+                x += 22.5
+            }
+         
+            drawHexagon(x,y)
+          
+        }
     }
 }
+
+function drawHexagon(x: number, y: number): void {
+    line(x + 20, y + 0, x + 45, y + 0)
+    line(x + 20, y + 0, x + 0, y + 25)
+    line(x + 0, y + 25, x + 20, y + 50)
+    line(x + 45, y + 50, x + 65, y + 25)
+    line(x + 20, y + 50, x + 45, y + 50)
+    line(x + 65, y + 25, x + 45, y + 0)
+}
+
+
+
+
+
+
+
+
