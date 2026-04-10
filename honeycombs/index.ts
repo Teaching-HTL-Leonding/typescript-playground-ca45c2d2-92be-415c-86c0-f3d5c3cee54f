@@ -25,31 +25,34 @@ function setup() {
 
 function drawHoneycomb(): void {
 
-    for (let i = 0; i <=7; i++) {
-        for (let o = 0; o < 10; o++) {
+    for (let i = 0; i < 7; i++) {
+        for (let o = 0; o < 9; o++) {
             let x = o * 45
-            let y = i * 50
-            
-            if (i % 2 === 1) {
-                //x += 22.5
-            
-            }if (o % 2 === 1){ 
+            let y = i * 49.5
+
+            if (o % 2 === 1) {
                 y += 22.5
             }
-            
-            drawHexagon(x,y)
-         
+            if (i !== 6 || o % 2 === 0) {
+
+                drawHexagon(x, y)
+            }
         }
     }
 }
 
 function drawHexagon(x: number, y: number): void {
+
+
     line(x + 20, y + 0, x + 45, y + 0)
+
+
     line(x + 20, y + 0, x + 0, y + 25)
     line(x + 0, y + 25, x + 20, y + 50)
     line(x + 45, y + 50, x + 65, y + 25)
     line(x + 20, y + 50, x + 45, y + 50)
     line(x + 65, y + 25, x + 45, y + 0)
+
 }
 
 
