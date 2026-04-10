@@ -25,17 +25,20 @@ function setup() {
 
 function drawHoneycomb(): void {
 
-    for (let i = 0; i < 1; i++) {
+    for (let i = 0; i <=7; i++) {
         for (let o = 0; o < 10; o++) {
             let x = o * 45
-            let y = i * 38
+            let y = i * 50
             
             if (i % 2 === 1) {
-                x += 22.5
+                //x += 22.5
+            
+            }if (o % 2 === 1){ 
+                y += 22.5
             }
-         
+            
             drawHexagon(x,y)
-          
+         
         }
     }
 }
